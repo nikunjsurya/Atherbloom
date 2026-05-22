@@ -188,9 +188,20 @@ function Petals() {
 function Hero({ t }) {
   return (
     <section className="relative w-full" style={{ minHeight: '100vh' }} data-screen-label="01 Hero">
-      {/* Background image — held perfectly still */}
+      {/* Background video — live, looping, muted */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="hero-bg" />
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="assets/hero.png?v=2"
+          aria-hidden="true"
+        >
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
 
         {/* Living-scene wind layers */}
         <div className="sun-shimmer" />

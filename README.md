@@ -2,7 +2,7 @@
 
 > *Venture Past Our Sky* — a cinematic, single-page landing site for a fictional deep-space exploration brand.
 
-Atherbloom is a self-contained marketing landing page built around a still hero photograph brought to life with layered, GPU-friendly CSS animations: drifting cherry-blossom petals, swaying blossom washes, wandering mist, a breathing sun glow, and floating dust. A frosted-glass navbar and headline sit on top, with a live **Tweaks** panel for editing copy and atmosphere in the browser.
+Atherbloom is a self-contained marketing landing page built around a looping hero video, layered with GPU-friendly CSS animations: drifting cherry-blossom petals, swaying blossom washes, wandering mist, a breathing sun glow, and floating dust. A still image (`hero.png`) serves as the poster and fallback. A frosted-glass navbar and headline sit on top, with a live **Tweaks** panel for editing copy and atmosphere in the browser.
 
 ## Preview
 
@@ -14,7 +14,7 @@ python -m http.server 8000
 # then visit http://localhost:8000/Atherbloom.html
 ```
 
-> A local server is recommended over `file://` so the browser can fetch `app.jsx` and `tweaks-panel.jsx` and load `assets/hero.png`.
+> A local server is recommended over `file://` so the browser can fetch `app.jsx` and `tweaks-panel.jsx` and stream `assets/hero.mp4`.
 
 ## How it works
 
@@ -32,7 +32,7 @@ The page is a no-bundler React app. Everything is loaded straight from CDNs and 
 | [`Atherbloom.html`](Atherbloom.html) | Entry point. Tailwind config, all animation CSS, and the CDN script tags. |
 | [`app.jsx`](app.jsx) | The landing page itself — `Navbar`, `Hero`, animated `Petals`, `PartnerRow`, and the `App` root. |
 | [`tweaks-panel.jsx`](tweaks-panel.jsx) | Reusable Tweaks panel shell + form controls (`TweakText`, `TweakSelect`, `TweakSlider`, `TweakToggle`, …) and the `useTweaks` hook. |
-| [`assets/`](assets/) | Static assets, including the hero background (`hero.png`). |
+| [`assets/`](assets/) | Static assets — the looping hero video (`hero.mp4`) and its poster/fallback still (`hero.png`). |
 | [`uploads/`](uploads/) | Source/working images. |
 
 ## Editing content

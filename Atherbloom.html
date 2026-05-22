@@ -33,13 +33,14 @@
     overflow-x: hidden;
   }
 
-  /* Hero background — kept perfectly still */
-  .hero-bg {
+  /* Hero background — live video, gently filling the frame */
+  .hero-video {
     position: absolute;
     inset: 0;
-    background-image: url('assets/hero.png?v=2');
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   /* ─── Living-photograph wind layers ──────────────────────────────── */
